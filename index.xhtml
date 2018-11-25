@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="Bootstrap/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+    <h:head>
+        <title>首页-大学生在线知识测试</title>
+        <h:outputStylesheet library="css" name="index.css" />
+    </h:head>
+     <h:body>
+        <h:form>
+            
+        <div class="header">
+            
+            <div class="nav_index">
+                
+                <ui:include src="nav.xhtml"/>   
+            </div>
+           
+            <div class="nav">
+	    <ul>
+		<li>
+                    <h:commandLink value="登录" action="login"/>
+		</li>
+                <li>
+		    <h:commandLink value="注册" action="register"/>
+		</li>
+	    </ul>
+            </div>
+            <hr/>
+        <div id="div1">
+        <h:outputLabel for="id1" value="搜索问题:"/>
+        <h:inputText class="input"/>
+        <h:commandButton class="button" value="搜索"/>
+        </div>
+        </div>
+        <div class="body">
+            <div id="div2">
+                <h:outputLabel value="最新公告"/>
+                <hr/>
+                 <br/>
+                 <p>欢迎大家进入测试系统</p>
+                 <br/>
+                 <p>欢迎大家进入测试系统</p>
+                 <br/>
+                 <p>欢迎大家进入测试系统</p>
+                 <br/>
+                 
+            </div>
+            <div id="div3">
+                <h:outputLabel value="热门分类"/>
+                <hr/>
+                <div id="div3-1" class="d">
+                    <a href="#">
+                    <div id="div3-1-1" class="p"></div>
+                    </a>
+                <br/><br/>
+                &nbsp;类别：语文
+                <br/><br/>
+                &nbsp;热门指数:三颗星          
+                </div>
+                <div id="div3-2" class="d">
+                    <a href="#">
+                <div id="div3-2-1" class="p"></div>
+                    </a>
+                <br/><br/>
+                &nbsp;类别：数学
+                <br/><br/>
+                &nbsp;热门指数:两颗星  
+                </div>
+            </div>
+            <div id="div4">
+                <h:outputLabel value="热门分类"/>
+                <hr/>
+                <div id="div4-1" class="d">
+                    <a href="#">
+                <div id="div4-1-1" class="p"></div>
+                    </a>
+                <br/><br/>
+                &nbsp;类别：Java
+                <br/><br/>
+                &nbsp;热门指数:三颗星  
+                </div>
+                <div id="div4-2" class="d">
+                    <a href="#">
+                <div id="div4-2-1" class="p"></div>
+                    </a>
+                <br/><br/>
+                &nbsp;类别：Servlet/JSP
+                <br/><br/>
+                &nbsp;热门指数:三颗星  
+                </div>
+                <div id="div4-3" class="d">
+                    <a href="#">
+                <div id="div4-3-1" class="p"></div>
+                    </a>
+                <br/><br/>
+                &nbsp;类别：JSF框架
+                <br/><br/>
+                &nbsp;热门指数:三颗星  
+                </div>
+            </div>
+            <div id="div5">
+                <h:outputLabel value="热门分类"/>
+                <hr/>
+                <div id="div5-1" class="d">
+                    <a href="#">
+                <div id="div5-1-1" class="p"></div>
+                    </a>
+                <br/><br/>
+                &nbsp;类别：形势政策
+                <br/><br/>
+                &nbsp;热门指数:一颗星  
+                </div>
+                <div id="div5-2" class="d">
+                    <a href="class1.xhtml">
+                <div id="div5-2-1" class="p"></div>
+                    </a>
+                <br/><br/>
+                &nbsp;类别：英语
+                <br/><br/>
+                &nbsp;热门指数:五颗星  
+                </div>
+                <div id="div5-3" class="d">
+                    <a href="#">
+                <div id="div5-3-1" class="p"></div>
+                    </a>
+                <br/><br/>
+                &nbsp;类别：文言文
+                <br/><br/>
+                &nbsp;热门指数:一颗星  
+                </div>
+            </div>
+            <div id="div6">
+                <h:outputLabel value="热门分类"/>
+                <hr/>
+                <div id="div6-1" class="d">
+                    <a href="#">
+                <div id="div6-1-1" class="p"></div>
+                    </a>
+                <br/><br/>
+                &nbsp;类别：化学
+                <br/><br/>
+                &nbsp;热门指数:三颗星  
+                </div>
+                <div id="div6-2" class="d">
+                    <a href="#">
+                <div id="div6-2-1" class="p"></div>
+                    </a>
+                <br/><br/>
+                &nbsp;类别：物理
+                <br/><br/>
+                &nbsp;热门指数:三颗星  
+                </div>
+                <div id="div6-3" class="d">
+                    <a href="#">
+                <div id="div6-3-1" class="p"></div>
+                    </a>
+                <br/><br/>
+                &nbsp;类别：生物
+                <br/><br/>
+                &nbsp;热门指数:三颗星  
+                </div>
+            </div>
+            
+            <div class="foot">
+                <br/><br/>
+                <hr/>
+                <p>联系我们|关于我们</p>
+
+            </div>
+        </div>
+        </h:form>
+    </h:body>
+</html>
+
