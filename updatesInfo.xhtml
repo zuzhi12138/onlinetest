@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+        <title>个人信息修改</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <h:form style="background: url(../resources/pic/pic1.jpg);width: 700px;height: 600px;margin:50px auto; border-radius: 10px; line-height: 40px;">
+            <h:panelGrid columns="2" cellspacing="10" style="margin: 40px auto;width: 300px;">
+                <f:facet name="header">
+                    <h1 style="margin-top: 100px;">修改信息</h1>
+                </f:facet>
+            <h:outputLabel for="sname" value="用户名&nbsp;:" style="font-weight: bold;"/>
+            <h:outputText value="" id="sname" />
+           
+            <h:outputLabel for="sid" value="账&nbsp;号&nbsp;:" style="font-weight: bold;"/>
+            <h:outputText value="" id="sid" />
+            
+            <h:outputLabel for="sage" value="年&nbsp;龄&nbsp;:" style="font-weight: bold;"/>
+            <h:inputText value="" id="sage" style="height: 20px;width: 120px;font-size: larger;border-radius: 10px;"/>
+           
+            <h:outputLabel for="smobile" value="手&nbsp;机&nbsp;:" style="font-weight: bold;"/>
+            <h:inputText value="" id="smobile" style="height: 20px;width: 120px;font-size: larger;border-radius: 10px;"/>
+            <f:facet name="footer">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <h:commandButton value="提交修改"  style="background-color: #398439; height: 30px;border-radius: 5px;"/>
+            </f:facet>
+            </h:panelGrid>
+        </h:form>
+    </body>
+</html>
