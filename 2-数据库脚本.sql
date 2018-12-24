@@ -12,17 +12,17 @@ Cmodule nvarchar(20)
 go
 
 insert into Course values
-('C001',N'è¯­æ–‡',4,N'æ¨¡å—1'),
-('C002',N'æ•°å­¦',6,N'æ¨¡å—2'),
-('C003',N'Javaå…¥é—¨',4,N'æ¨¡å—3'),
-('C004',N'Servlet/JSP',6,N'æ¨¡å—1'),
-('C005',N'JSFæ¡†æ¶',2,N'æ¨¡å—2'),
-('C006',N'å½¢åŠ¿æ”¿ç­–',2,N'æ¨¡å—3'),
-('C007',N'English',3,N'æ¨¡å—1'),
-('C008',N'æ–‡è¨€æ–‡',3,N'æ¨¡å—2'),
-('C009',N'åŒ–å­¦',3,N'æ¨¡å—3'),
-('C010',N'ç‰©ç†',3,N'æ¨¡å—1'),
-('C011',N'ç”Ÿç‰©',3,N'æ¨¡å—2')
+('C001',N'ÓïÎÄ',4,N'Ä£¿é1'),
+('C002',N'ÊıÑ§',6,N'Ä£¿é2'),
+('C003',N'JavaÈëÃÅ',4,N'Ä£¿é3'),
+('C004',N'Servlet/JSP',6,N'Ä£¿é1'),
+('C005',N'JSF¿ò¼Ü',2,N'Ä£¿é2'),
+('C006',N'ĞÎÊÆÕş²ß',2,N'Ä£¿é3'),
+('C007',N'English',3,N'Ä£¿é1'),
+('C008',N'ÎÄÑÔÎÄ',3,N'Ä£¿é2'),
+('C009',N'»¯Ñ§',3,N'Ä£¿é3'),
+('C010',N'ÎïÀí',3,N'Ä£¿é1'),
+('C011',N'ÉúÎï',3,N'Ä£¿é2')
 go
 
 
@@ -41,30 +41,30 @@ primary key(QuestionId,CourseId)
 go
 
 insert into Question values
-(1,N'JSFä¸»è¦ç”±ä¸¤éƒ¨åˆ†ç»„æˆï¼Œå…¶ä¸­ä¸€ä¸ªæ˜¯åŠŸèƒ½å¼ºå¤§çš„APIå‡½æ•°ï¼Œå¦ä¸€ä¸ªæ˜¯ä»€ä¹ˆï¼Ÿ',N'æ¡†æ¶1',N'æ¡†æ¶2',N'ä¸€å¥—åŒ…å«å„ç§é¡µé¢å…ƒç´ å¹¶å…è®¸è‡ªå®šä¹‰çš„JSPæ ‡ç­¾åº“',N'æ¡†æ¶4','C',20,'C005'),
-(2,N'JSFç»„æˆéƒ¨åˆ†ä¸­çš„JSPæ ‡ç­¾åº“çš„ä½œç”¨',N'å¥½çœ‹',N'ç¾è§‚',N'å¤„ç†',N'åœ¨JSPé¡µé¢ä¸­æ˜¾ç¤ºJSFçš„ç•Œé¢','D',20,'C005'),
-(3,N'JSFç»„æˆéƒ¨åˆ†ä¸­APIå‡½æ•°çš„ä½œç”¨',N'è¡¨ç¤ºUIç»„ä»¶ã€ç®¡ç†ç»„ä»¶çŠ¶æ€ï¼Œå¤„ç†äº‹ä»¶ç­‰',N'ç¾è§‚',N'å¥½çœ‹',N'å¥½çœ‹1','A',20,'C005'),
-(4,N'æˆ‘ä»¬å®è®­ä¼šæŒ‚ç§‘å—',N'ä¸ä¼š',N'è‚¯å®šä¸ä¼š',N'å¿…é¡»ä¸ä¼š',N'ä»¥ä¸Šéƒ½å¯¹','D',20,'C005'),
-(5,N'å’±ä»¬è€å¸ˆå¥½å—',N'å¥½',N'éå¸¸å¥½',N'ç‰¹åˆ«å¥½',N'ä»¥ä¸Šéƒ½æ­£ç¡®','D',20,'C005')
+(1,N'JSFÖ÷ÒªÓÉÁ½²¿·Ö×é³É£¬ÆäÖĞÒ»¸öÊÇ¹¦ÄÜÇ¿´óµÄAPIº¯Êı£¬ÁíÒ»¸öÊÇÊ²Ã´£¿',N'¿ò¼Ü1',N'¿ò¼Ü2',N'Ò»Ì×°üº¬¸÷ÖÖÒ³ÃæÔªËØ²¢ÔÊĞí×Ô¶¨ÒåµÄJSP±êÇ©¿â',N'¿ò¼Ü4','C',20,'C005'),
+(2,N'JSF×é³É²¿·ÖÖĞµÄJSP±êÇ©¿âµÄ×÷ÓÃ',N'ºÃ¿´',N'ÃÀ¹Û',N'´¦Àí',N'ÔÚJSPÒ³ÃæÖĞÏÔÊ¾JSFµÄ½çÃæ','D',20,'C005'),
+(3,N'JSF×é³É²¿·ÖÖĞAPIº¯ÊıµÄ×÷ÓÃ',N'±íÊ¾UI×é¼ş¡¢¹ÜÀí×é¼ş×´Ì¬£¬´¦ÀíÊÂ¼şµÈ',N'ÃÀ¹Û',N'ºÃ¿´',N'ºÃ¿´1','A',20,'C005'),
+(4,N'ÎÒÃÇÊµÑµ»á¹Ò¿ÆÂğ',N'²»»á',N'¿Ï¶¨²»»á',N'±ØĞë²»»á',N'ÒÔÉÏ¶¼¶Ô','D',20,'C005'),
+(5,N'ÔÛÃÇÀÏÊ¦ºÃÂğ',N'ºÃ',N'·Ç³£ºÃ',N'ÌØ±ğºÃ',N'ÒÔÉÏ¶¼ÕıÈ·','D',20,'C005')
 
 go
 
-create table [User](
-UserId int primary key,
-UserPassword nvarchar(15),
-UserName nvarchar(10),
-UserGender nchar(1),
-UserAge int,
-UserMobile nvarchar(11)
+create table Student(
+StudentId int primary key,
+StudentPassword nvarchar(15),
+StudentName nvarchar(10),
+StudentGender nchar(1),
+StudentAge int,
+StudentMobile nvarchar(11)
 )
 go
 
-insert into [User] values
-(001,'123456','Tom',N'ç”·',18,'1314645'),
-(002,'123456','john',N'ç”·',20,'1876678'),
-(003,'123456','lily',N'å¥³',16,'1897656'),
-(004,'123456','sam',N'ç”·',5,'1768936'),
-(005,'123456','amy',N'å¥³',30,'1897')
+insert into Student values
+(001,'123456','Tom',N'ÄĞ',18,'13146498715'),
+(002,'123456','john',N'ÄĞ',20,'18765425678'),
+(003,'123456','lily',N'Å®',16,'18976543456'),
+(004,'123456','sam',N'ÄĞ',5,'17689075436'),
+(005,'123456','amy',N'Å®',30,'18909752897')
 go
 
 
@@ -81,19 +81,19 @@ ManagerMobile nchar(11)
 go
 
 insert into Manager values
-(001,'admin','æè€å¸ˆ',N'å¥³','88866688866'),
-(002,'admin','john',N'ç”·','18765678'),
-(003,'admin','lily',N'å¥³','189763456'),
-(004,'admin','sam',N'ç”·','17675436'),
-(005,'admin','amy',N'å¥³','18909797')
+(001,'admin','ÀîÀÏÊ¦',N'Å®','88866688866'),
+(002,'admin','john',N'ÄĞ','18765678'),
+(003,'admin','lily',N'Å®','189763456'),
+(004,'admin','sam',N'ÄĞ','17675436'),
+(005,'admin','amy',N'Å®','18909797')
 go
 
 create table Grade(
-UserId int foreign key references [User](UserId),
+StudentId int foreign key references Student(StudentId),
 CourseId char(4) foreign key references Course(CourseId),
-UserGrade int,
+StudentGrade int,
 FinishDate nvarchar(50),
-primary key(UserId,CourseId)
+primary key(StudentId,CourseId)
 )
 go
 insert into Grade values
@@ -102,43 +102,43 @@ insert into Grade values
 (004,'C005',100,'2018-12-25'),
 (005,'C005',80,'2018-12-28')
 
-create table UserCourse(
-UserId int foreign key references [User](UserId),
-UserName nvarchar(10),
+create table StudentCourse(
+StudentId int foreign key references Student(StudentId),
+StudentName nvarchar(10),
 CourseId char(4) foreign key references Course(CourseId),
 CourseName nvarchar(20)
 )
-insert into UserCourse values
-(001,'Tom','C001',N'è¯­æ–‡'),
-(001,'Tom','C005',N'JSFæ¡†æ¶'),
+insert into StudentCourse values
+(001,'Tom','C001',N'ÓïÎÄ'),
+(001,'Tom','C005',N'JSF¿ò¼Ü'),
 (001,'Tom','C007','English'),
-(003,'Lily','C005',N'JSFæ¡†æ¶')
+(003,'Lily','C005',N'JSF¿ò¼Ü')
 
 
 create table TestApplication(
-UserId int foreign key references [User](UserId),
-UserName nvarchar(10),
+StudentId int foreign key references Student(StudentId),
+StudentName nvarchar(10),
 CourseId char(4) foreign key references Course(CourseId),
 CourseName nvarchar(20),
 Application nvarchar(10)
 )
 insert into TestApplication values
-(001,'Tom','C005',N'JSFæ¡†æ¶',N'æ‰¹å‡†'),
-(001,'Tom','C009','åŒ–å­¦',N'æ‹’ç»'),
-(003,'Lily','C005',N'JSFæ¡†æ¶',N'æœªå¤„ç†'),
-(004,'sam','C005',N'JSFæ¡†æ¶',N'æœªå¤„ç†')
+(001,'Tom','C005',N'JSF¿ò¼Ü',N'Åú×¼'),
+(001,'Tom','C009','»¯Ñ§',N'¾Ü¾ø'),
+(003,'Lily','C005',N'JSF¿ò¼Ü',N'Î´´¦Àí'),
+(004,'sam','C005',N'JSF¿ò¼Ü',N'Î´´¦Àí')
 
 
 
 
 
-select * from [User]
+select * from Student
 
 select * from Manager
 
 select * from Course
 select * from Question
-select * from UserCourse
+select * from StudentCourse
 select * from Grade
 select * from TestApplication
 
