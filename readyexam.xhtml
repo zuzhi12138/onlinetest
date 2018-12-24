@@ -4,7 +4,7 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
-        <title>大学生在线知识测试</title>
+        <title>在线考试系统</title>
         <link href="css/style.css" rel="stylesheet" />
             <link rel="stylesheet" href="Bootstrap/bootstrap-3.3.6-dist/css/bootstrap.min.css"></link>
     <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
@@ -12,21 +12,21 @@
     </h:head>
     <h:body>
         <div style="background: url(../resources/pic/pic1.jpg);width: 1380px;height: 800px;margin:50px auto; border-radius: 10px;">
-            <h1 align="center" style="font-size: 40px;padding-top:20px;">在线测试</h1>
+            <h1 align="center" style="font-size: 40px;padding-top:20px;">在线考试</h1>
             <hr/>
             <br/>
             <h:form >
                 <div style="padding-left:  400px;">
-                <h:outputLabel value="请选择测试科目：" for="course" style="font-size: 30px" />
+                <h:outputLabel value="请选择考试科目：" for="course" style="font-size: 30px" />
                 <br/><br/>
                 <h:selectOneRadio id="course"
-                                  value=""
+                                  value="#{dataBean.selectedCourseId}"
                                   layout="pageDirection" style="line-height:30px; font-size: 25px">
-                   
+                    <f:selectItems value="#{dataBean.courseMap}" />
                 </h:selectOneRadio>
                 <br/><br/>
                 
-                <h:commandButton class="btn btn-default" value="开始测试" style="position:absolute;left:1000px;top:400px; width: 90px;height: 40px;" />
+                <h:commandButton class="btn btn-default" value="开始考试" action="#{dataBean.startExam}" style="position:absolute;left:1000px;top:400px; width: 90px;height: 40px;" />
                 
                 </div>
             </h:form>

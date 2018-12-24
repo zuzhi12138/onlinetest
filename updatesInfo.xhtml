@@ -15,19 +15,19 @@
                     <h1 style="margin-top: 100px;">修改信息</h1>
                 </f:facet>
             <h:outputLabel for="sname" value="用户名&nbsp;:" style="font-weight: bold;"/>
-            <h:outputText value="" id="sname" />
+            <h:outputText value="#{dataBean.student.studentName}" id="sname" />
            
-            <h:outputLabel for="sid" value="账&nbsp;号&nbsp;:" style="font-weight: bold;"/>
-            <h:outputText value="" id="sid" />
+            <h:outputLabel for="sid" value="学&nbsp;号&nbsp;:" style="font-weight: bold;"/>
+            <h:outputText value="#{dataBean.student.studentId}" id="sid" />
             
             <h:outputLabel for="sage" value="年&nbsp;龄&nbsp;:" style="font-weight: bold;"/>
-            <h:inputText value="" id="sage" style="height: 20px;width: 120px;font-size: larger;border-radius: 10px;"/>
+            <h:inputText value="#{dataBean.student.studentAge}" id="sage" style="height: 20px;width: 120px;font-size: larger;border-radius: 10px;"/>
            
             <h:outputLabel for="smobile" value="手&nbsp;机&nbsp;:" style="font-weight: bold;"/>
-            <h:inputText value="" id="smobile" style="height: 20px;width: 120px;font-size: larger;border-radius: 10px;"/>
+            <h:inputText value="#{dataBean.student.studentMobile}" id="smobile" style="height: 20px;width: 120px;font-size: larger;border-radius: 10px;"/>
             <f:facet name="footer">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <h:commandButton value="提交修改"  style="background-color: #398439; height: 30px;border-radius: 5px;"/>
+            <h:commandButton value="提交修改" action="#{dataBean.updateSInfo()}" style="background-color: #398439; height: 30px;border-radius: 5px;"/>
             </f:facet>
             </h:panelGrid>
         </h:form>
