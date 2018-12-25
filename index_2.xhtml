@@ -3,44 +3,40 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
-    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
-    <script src="Bootstrap/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
     <h:head>
-        <title>首页-大学生在线知识测试系统</title>
+        <title>登录成功</title>
         <h:outputStylesheet library="css" name="index.css" />
     </h:head>
-     <h:body>
+    <h:body>
         <h:form>
-            
         <div class="header">
-            
+       
+        <div> <!--设置背景图片而已-->
             <div class="nav_index">
-                
                 <ui:include src="nav.xhtml"/>   
             </div>
-           
             <div class="nav">
 	    <ul>
 		<li>
-                    <h:commandLink value="登录" action="login"/>
+                    欢迎,#{dataBean.student.studentName}
 		</li>
-                <li>
-		    <h:commandLink value="注册" action="register"/>
-		</li>
+                <li><h:commandButton value="退出" action="login.xhtml" class="buttonT"/></li>
 	    </ul>
-            </div>
-            <hr/>
+	</div>
+            
+        </div>
+        <hr/>
         <div id="div1">
         <h:outputLabel for="id1" value="搜索课程:"/>
         <h:inputText class="input"/>
         <h:commandButton class="button" value="搜索"/>
         </div>
         </div>
-        <div class="body">
+            <div class="body">
             <div id="div2">
                 <h:outputLabel value="最新公告"/>
                 <hr/>
-                 <br/>
+                <br/>
                  <p>期末考试即将来临，祝大家有个好成绩！</p>
                  <br/>
                  <br/>
@@ -100,7 +96,7 @@
                 <br/><br/>
                 &nbsp;课时：10节
                 <br/><br/>
-                &nbsp;课程：Servlet/JSP
+                &nbsp;课程：毛概
                 </div>
                 <div id="div4-3" class="d">
                     <a href="#">

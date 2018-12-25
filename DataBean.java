@@ -4,15 +4,25 @@ import com.qdu.dao.CourseDao;
 import com.qdu.dao.GradeDao;
 import com.qdu.dao.ManagerDao;
 import com.qdu.dao.QuestionDao;
+import com.qdu.dao.StudentCourseDao;
 import com.qdu.dao.StudentDao;
+import com.qdu.pojo.Grade;
 import com.qdu.pojo.Question;
 import com.qdu.pojo.Student;
+import com.qdu.pojo.StudentCourse;
+import com.qdu.util.ExcelUtil;
+import com.qdu.util.HibernateUtil;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.hibernate.Query;
+import org.hibernate.Session;
 
 
 @ManagedBean
@@ -33,6 +43,55 @@ public class DataBean {
     private HashMap<Integer, Question> questionMap; //存储选中课程对应的所有问题
     private Question currentQuestion; //当前问题的内容
     private String result; //显示一个结果，挂科还是通过
+    private List<StudentCourse> scourselist;
+    private List<Grade> gradelist;
+     //学生登录
+    public String findStudent() {
+        StudentDao dao = new StudentDao();
+        student = dao.findStudentBystidspwd(stId, spwd);
+        if (student != null) {
+            return "index_2";
+        } else {
+            return "fail";
+        }
+    }
+    // 学生信息注册
+    public void registerStudent() {
+        StudentDao dao = new StudentDao();
+        int rows = dao.insert(student);
+        if (rows != 0) {
+            message = "注册成功，请跳转到登陆页面登录！";
+            color = "green";
+        } else {
+            message = "注册失败，请检查信息！";
+            color = "red";
+        }
+    }
+    //查看已注册的课程
+    public String queryCourse(){
+        StudentCourseDao dao=new StudentCourseDao();
+        scourselist=dao.findCourseBySid(student.getStudentId());
+        return "queryCourse";
+    }
+    //学生查询成绩
+    public String queryGrades(){
+        GradeDao dao=new GradeDao();
+        gradelist=dao.findGradeBySid(student.getStudentId());
+        return "queryGrade";
+    }
+    public String exportAllCpy() throws Exception{
+        Workbook wb=new HSSFWorkbook();
+        String headers[]={"学生id","课程id","成绩","提交时间"};
+        Session session=HibernateUtil.getSession();
+        Query query=session.createQuery("select gradeId.studentId,gradeId.courseId,studentGrade,finishDate from Grade where gradeId.studentId=:studentId");
+        query.setParameter("studentId", stId);
+        List<Object[]> list=query.list();
+        HibernateUtil.close(session); 
+        ExcelUtil.fillExcel(list, wb, headers);
+        
+        ExcelUtil.export(wb,"成绩单");
+        return null;
+    }
  //修改密码
     public String updateSpwd() {
         StudentDao dao = new StudentDao();
@@ -242,6 +301,22 @@ public class DataBean {
 
     public void setResult(String result) {
         this.result = result;
+    }
+
+    public List<StudentCourse> getScourselist() {
+        return scourselist;
+    }
+
+    public void setScourselist(List<StudentCourse> scourselist) {
+        this.scourselist = scourselist;
+    }
+
+    public List<Grade> getGradelist() {
+        return gradelist;
+    }
+
+    public void setGradelist(List<Grade> gradelist) {
+        this.gradelist = gradelist;
     }
     
     
