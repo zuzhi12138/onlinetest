@@ -1,14 +1,34 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.qdu.pojo;
 
-/**
- *
- * @author hi
- */
-public class QuestionId {
+import java.io.Serializable;
+
+public class QuestionId implements Serializable{
+    private int questionId;
+     private String courseId;
+     
+     public QuestionId() {
+    }
+
+    public QuestionId(int questionId, String courseId) {
+       this.questionId = questionId;
+       this.courseId = courseId;
+    }
+   
+    public int getQuestionId() {
+        return this.questionId;
+    }
     
+    public void setQuestionId(int questionId) {
+        this.questionId = questionId;
+    }
+    public String getCourseId() {
+        return this.courseId;
+    }
+    
+    public void setCourseId(String courseId) {
+        this.courseId = courseId;
+    }
+
+ 
 }

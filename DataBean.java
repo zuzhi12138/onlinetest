@@ -6,6 +6,7 @@ import com.qdu.dao.ManagerDao;
 import com.qdu.dao.QuestionDao;
 import com.qdu.dao.StudentCourseDao;
 import com.qdu.dao.StudentDao;
+import com.qdu.pojo.Course;
 import com.qdu.pojo.Grade;
 import com.qdu.pojo.Question;
 import com.qdu.pojo.Student;
@@ -45,6 +46,10 @@ public class DataBean {
     private String result; //显示一个结果，挂科还是通过
     private List<StudentCourse> scourselist;
     private List<Grade> gradelist;
+    private List<Course> courselist;
+    private Course course=new Course();
+    private Question question=new Question();
+    private List<Question> questionlist;
      //学生登录
     public String findStudent() {
         StudentDao dao = new StudentDao();
@@ -111,7 +116,58 @@ public class DataBean {
         dao.updateMpwd(stId, spwd);
         return "index";
     }
+//删除类别页面
+        public String deleteCourse() {
+        CourseDao dao = new CourseDao();
+        courselist = dao.getAllCourses();
+        return "deleteCourse";
+    }
+    //删除类别
+    public String deleteCourseById(String sid){
+    CourseDao dao = new CourseDao();
+    dao.deleteCourseById(sid);
+    courselist = dao.getAllCourses();
+    return "deleteCourse";
+    }
 
+     //更改类别信息   
+    public void updateCourse(String cid,String cname,int credit,String module) {
+        CourseDao dao = new CourseDao();
+        dao.updateCourse(cid, cname,credit,module);
+        courselist = dao.getAllCourses();
+    }   
+    //添加类别
+    public String insertCourse() {
+        CourseDao dao = new CourseDao();
+        int rows = dao.insert(course);
+        return "managersuccess";
+    }
+    //添加试题
+    public String insertQuestion() {
+    QuestionDao dao = new QuestionDao();
+    dao.insert(question.getQuestionDesc(),question.getAnswerA(),question.getAnswerB(),question.getAnswerC(),question.getAnswerD(),question.getAnswerKey(),question.getCredit(),currentQuestionId,selectedCourseId);
+    return "managersuccess";
+    }
+    
+    //删除试题页面
+        public String deleteQuestion() {
+        QuestionDao dao = new QuestionDao();
+        questionlist = dao.getAllQuestions();
+        return "deleteQuestion";
+    }
+    //删除试题
+    public String deleteQuestionById(int qid,String cid){
+    QuestionDao dao = new QuestionDao();
+    dao.deleteQuestionById(qid,cid);
+    questionlist = dao.getAllQuestions();
+    return "selectQuestion";
+    }
+     //更改试题信息   
+    public void updateQuestion(int qid, String cid, String desc, String A, String B, String C, String D, String key, int credit) {
+        QuestionDao dao = new QuestionDao();
+        dao.updateQuestion(qid, cid, desc, A, B, C, D, key, credit);
+        questionlist = dao.getAllQuestions();
+    }  
     //准备考试
     public String readyExam() {
         CourseDao dao = new CourseDao();
