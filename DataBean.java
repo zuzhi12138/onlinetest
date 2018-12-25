@@ -50,6 +50,8 @@ public class DataBean {
     private Course course=new Course();
     private Question question=new Question();
     private List<Question> questionlist;
+    private String courseid;
+    private String gradeTime="2018-12-25";
      //学生登录
     public String findStudent() {
         StudentDao dao = new StudentDao();
@@ -243,6 +245,47 @@ public class DataBean {
 
         return "result"; //返回值让页面跳转到result页面
     }
+    //通过类别编号查询成绩
+    public void findGradeByCid(){
+        Session session=HibernateUtil.getSession();
+        Query query=session.createQuery("from Grade where courseId=:courseId");
+        query.setParameter("courseId", courseid);
+        gradelist=query.list();
+        HibernateUtil.close(session);
+    }
+    //通过类别编号查询成绩排名
+    public void findGradeByCidOrder(){
+        Session session=HibernateUtil.getSession();
+        Query query=session.createQuery("from Grade where courseId=:courseId order by studentGrade desc");
+        query.setParameter("courseId", courseid);
+        gradelist=query.list();
+        HibernateUtil.close(session);
+    }
+    //通过学号查询成绩
+    public void findGradeBySid(){
+        Session session=HibernateUtil.getSession();
+        Query query=session.createQuery("from Grade where studentId=:studentId");
+        query.setParameter("studentId", stId);
+        gradelist=query.list();
+        HibernateUtil.close(session);
+    }
+    //通过日期查询成绩
+    public void findGradeByDateCourse(){
+        Session session=HibernateUtil.getSession();
+        Query query=session.createQuery("from Grade where finishDate=:finishDate and courseId=:courseId");
+        query.setParameter("finishDate", gradeTime);
+        query.setParameter("courseId",courseid);
+        gradelist=query.list();
+        HibernateUtil.close(session);
+    }
+     //通过类别编号查询试题
+    public void findQuestionByCid(){
+        Session session=HibernateUtil.getSession();
+        Query query=session.createQuery("from Question where courseId=:courseId");
+        query.setParameter("courseId", courseid);
+        questionlist=query.list();
+        HibernateUtil.close(session);
+    }
     public int getStId() {
         return stId;
     }
@@ -373,6 +416,38 @@ public class DataBean {
 
     public void setGradelist(List<Grade> gradelist) {
         this.gradelist = gradelist;
+    }
+
+    public List<Course> getCourselist() {
+        return courselist;
+    }
+
+    public void setCourselist(List<Course> courselist) {
+        this.courselist = courselist;
+    }
+
+    public Course getCourse() {
+        return course;
+    }
+
+    public void setCourse(Course course) {
+        this.course = course;
+    }
+
+    public Question getQuestion() {
+        return question;
+    }
+
+    public void setQuestion(Question question) {
+        this.question = question;
+    }
+
+    public List<Question> getQuestionlist() {
+        return questionlist;
+    }
+
+    public void setQuestionlist(List<Question> questionlist) {
+        this.questionlist = questionlist;
     }
     
     
