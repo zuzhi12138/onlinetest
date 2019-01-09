@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>添加问卷试题</title>
+    </h:head>
+    <h:body>
+
+        <h:form style="background: url(../resources/pic/pic1.jpg);width: 1150px;height: 800px;margin:50px auto; border-radius: 10px;">
+            <h:panelGrid  cellspacing="20" columns="3" style="margin:30px auto;">
+                <f:facet name="header">
+                    <h1 style="margin-top: 80px;">添加问卷试题</h1>
+                </f:facet>
+                <h:outputLabel value="问卷试题&nbsp;id：" for="qId" style="font-weight: bold;"/>
+                <h:inputText id="qId" value="#{dataBean.currentQuestionId}"
+                             required="true" requiredMessage="*问卷试题编号不能为空" style="border-radius: 10px;"/>
+                <h:message for="qId" style="color:red;" />
+                
+                <h:outputLabel value="问卷类别&nbsp;id：" for="cId" style="font-weight: bold;" />
+                <h:inputText id="cId" value="#{dataBean.selectedCourseId}"
+                             required="true" requiredMessage="*问卷类别编号不能为空" style="border-radius: 10px;"/>
+                <h:message for="cId" style="color:red;" />
+                
+                <h:outputLabel value="问卷试题题目：" for="qdesc" style="font-weight: bold;"/>
+                <h:inputText  id="qdesc" value="#{dataBean.question.questionDesc}"
+                                required="true" requiredMessage="*问卷试题题目不能为空" style="border-radius: 10px;" />
+                <h:message for="qdesc" style="color:red;" />
+                
+                <h:outputLabel value="选项A：" for="A" style="font-weight: bold;"/>
+                <h:inputText id="A" value="#{dataBean.question.answerA}"
+                             required="true" requiredMessage="*选项不能为空" style="border-radius: 10px;" />
+                <h:message for="A" style="color:red;" />
+                
+                <h:outputLabel value="选项B：" for="B" style="font-weight: bold;"/>
+                <h:inputText id="B" value="#{dataBean.question.answerB}"
+                             required="true" requiredMessage="*选项不能为空" style="border-radius: 10px;" />
+                <h:message for="B" style="color:red;" />
+                
+                <h:outputLabel value="选项C：" for="C" style="font-weight: bold;"/>
+                <h:inputText id="C" value="#{dataBean.question.answerC}"
+                             required="true" requiredMessage="*选项不能为空" style="border-radius: 10px;"/>
+                <h:message for="C" style="color:red;" />
+                
+                <h:outputLabel value="选项D：" for="D" style="font-weight: bold;"/>
+                <h:inputText id="D" value="#{dataBean.question.answerD}"
+                             required="true" requiredMessage="*选项不能为空" style="border-radius: 10px;"/>
+                <h:message for="D" style="color:red;" />
+
+                <h:outputLabel value="正确选项：" for="key" style="font-weight: bold;"/>
+                <h:inputText id="key" value="#{dataBean.question.answerKey}"
+                             required="true" requiredMessage="*正确选项不能为空" style="border-radius: 10px;"/>
+                <h:message for="key" style="color:red;" />
+                
+                <h:outputLabel value="分&nbsp;值：" for="credit" style="font-weight: bold;"/>
+                <h:inputText id="credit" value="#{dataBean.question.credit}"
+                             required="true" requiredMessage="*试题分值不能为空" style="border-radius: 10px;"/>
+                <h:message for="credit" style="color:red;" />
+                
+                <f:facet name="footer">
+                    <h:panelGroup style="text-align: center;display:block;">
+                        <h:commandButton class="btn btn-default"  style="background-color: #398439; height: 30px;border-radius: 10px;" value="添加问卷试题" action="#{dataBean.insertQuestion()}" />
+                    </h:panelGroup>
+                </f:facet>
+
+            </h:panelGrid>
+        </h:form>
+        
+
+        
+    </h:body>
+</html>
+

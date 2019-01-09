@@ -1,0 +1,34 @@
+
+html,body,p,h1,h2,h3,h4,h5,h6,form,input,textarea,select,button,fieldset,legend,img,ul,ol,li,dl,dt,dd,th,td,pre,blockquote
+{margin:0;padding:0}
+
+
+body{background-color:#fff;color:#3b3b3b;min-height:100%;height:auto!important;height:100%}
+body{font:14px "微软雅黑","Microsoft Yahei",arial,simhei}
+
+img,fieldset{border:0;vertical-align:middle}
+ul,li,ol{list-style:none}
+em,i{font-style:normal}
+
+
+
+.textcent{ text-align:center}
+
+.head {height: 70px;width: 100%;margin: 0 auto }
+/*调整logo*/
+.cont{width:100%;margin:0px;float:left}
+.head-left {float: left;height: 41px;width:10%;}
+/*nav导航盒子div北京红色padding 内指div重元素到地vkuangdejuli*/
+.nav{width:90%;height:30px;text-align:center;font-size:6px;position:relative;padding-top:15px;  padding-left:150px;float:right; font-weight:bold; font-family:"微软雅黑";z-index:1000}
+/*nav-main*/
+ul.nav-main{width:100%;height:100%;list-style-type:none;font-size: 20px}
+ul.nav-main span{display:inline-block;margin-left:15px;width:12px;height:9px;}
+
+
+/*导航条设置mymusic一系列*/
+ul.nav-main>li{width:124px;height:100%;display:block;float:left;color:#3b3b3b;cursor:pointer;margin-left: 30px}
+ul.nav-main>li a{width:124px;height:100%;display:block;float:left;font-size:20px;color:#3b3b3b;cursor:pointer;}
+
+
+
+

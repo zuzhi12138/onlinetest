@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="Bootstrap/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+    <h:head>
+        <title>登录成功</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    </h:head>
+    <h:body>
+        <h:form style="background: url(../resources/pic/pic1.jpg);width: 900px;height: 800px;margin:50px auto; border-radius: 10px;">
+            <h:panelGrid columns="2"  cellspacing="10" style="margin: 30px auto;">
+                <h1 align="center">你好，#{dataBean.manager.managerName}！</h1>
+                <p>账&nbsp;号：&nbsp;#{dataBean.manager.managerNo}</p>
+                <p>密&nbsp;码：&nbsp;#{dataBean.manager.managerPassword}</p>
+                <p>性&nbsp;别：&nbsp;#{dataBean.manager.managerGender}</p>
+                <p>手&nbsp;机：&nbsp;#{dataBean.manager.managerMobile}</p>
+                <hr/>
+                
+                <f:facet name="footer">
+                    <span style="font-size: 20px;font-weight: bolder">问卷类别：</span>
+                    <br/>
+                    &nbsp;&nbsp;&nbsp;
+                    <h:commandButton  class="btn btn-default"  style="background-color: #398439; height: 30px;border-radius: 5px;"  value="查询问卷类别" action="selectCourse.xhtml"/>&nbsp;
+                    <h:commandButton  class="btn btn-default"  style="background-color: #398439; height: 30px;border-radius: 5px;"  value="添加问卷类别" action="insertCourse.xhtml"/>&nbsp;
+                    <h:commandButton  class="btn btn-default"  style="background-color: #398439; height: 30px;border-radius: 5px;"  value="更改或删除" action="#{dataBean.deleteCourse()}"/>&nbsp;
+                    <br/><br/>
+                    &nbsp;&nbsp;&nbsp;
+                    <h:commandButton  class="btn btn-default"  style="background-color: #398439; height: 30px;border-radius: 5px;"  value="查询已注册的问卷类别" action="chooseCourse.xhtml"/>&nbsp;
+                    <br/><br/>
+                    
+                    <span style="font-size: 20px;font-weight: bolder">问卷试题：</span>
+                    <br/>
+                    &nbsp;&nbsp;&nbsp;
+                    <h:commandButton  class="btn btn-default"  style="background-color: #398439; height: 30px;border-radius: 5px;"  value="查询问卷试题" action="selectQuestion.xhtml"/>&nbsp;
+                    <h:commandButton  class="btn btn-default"  style="background-color: #398439; height: 30px;border-radius: 5px;"  value="添加问卷试题" action="insertQuestion.xhtml"/>&nbsp;
+                    <br/><br/>
+                    <span style="font-size: 20px;font-weight: bolder">测试：</span>
+                    <br/>
+                    &nbsp;&nbsp;&nbsp;
+                    <h:commandButton  class="btn btn-default"  style="background-color: #398439; height: 30px;border-radius: 5px;"  value="测试申请" action="testapplication.xhtml"/>&nbsp;
+                    <br/><br/>
+                    
+                    <span style="font-size: 20px;font-weight: bolder">成绩：</span>
+                    <br/>
+                    &nbsp;&nbsp;&nbsp;
+                    <h:commandButton  class="btn btn-default"  style="background-color: #398439; height: 30px;border-radius: 5px;"  value="查询成绩" action="grade.xhtml"/>&nbsp;
+                    <hr/>
+                    
+                    &nbsp;&nbsp;&nbsp;
+                    <h:commandButton class="btn btn-default"  style="background-color: #398439; height: 30px;border-radius: 5px;" value="修改密码" action="updatempwd.xhtml"/>
+                    &nbsp;
+                    <h:commandButton  class="btn btn-default"  style="background-color: #398439; height: 30px;border-radius: 5px;" value="退出" action="index.xhtml"/>
+                    &nbsp;
+                </f:facet>
+            </h:panelGrid>
+        </h:form>
+           
+    </h:body>
+</html>

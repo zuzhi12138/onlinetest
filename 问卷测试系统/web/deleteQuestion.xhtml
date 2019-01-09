@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+        <title>更改或删除问卷试题</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <style>
+            input{
+                height: 20px;
+            } 
+        </style>
+
+    </head>
+    <body style="background-image: url(img/e.jpg);background-repeat: no-repeat;">
+        <h:form>
+            <h:dataTable value="#{dataBean.questionlist}" var="question"  rules="rows" width="500" style="text-align:center;margin:30px auto;">
+                <f:facet name="header">
+                    <h1>问卷试题信息</h1>
+                </f:facet>
+                    <h:column>
+                        <f:facet name="header" >
+                            问卷试题编号
+                        </f:facet>
+                        <h:inputText value="#{question.id.questionId}" style="width: 80px"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            问卷类别编号
+                        </f:facet>
+                        <h:inputText value="#{question.id.courseId}" style="width: 80px"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            问卷试题题目
+                        </f:facet>
+                        <h:inputText value="#{question.questionDesc}" style="width: 80px"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            选项A
+                        </f:facet>
+                        <h:inputText value="#{question.answerA}" style="width: 80px"/>
+                    </h:column>
+                <h:column>
+                        <f:facet name="header">
+                            选项B
+                        </f:facet>
+                        <h:inputText value="#{question.answerB}" style="width: 80px"/>
+                    </h:column>
+                <h:column>
+                        <f:facet name="header">
+                            选项C
+                        </f:facet>
+                        <h:inputText value="#{question.answerC}" style="width: 80px"/>
+                    </h:column>
+                <h:column>
+                        <f:facet name="header">
+                            选项D
+                        </f:facet>
+                        <h:inputText value="#{question.answerD}" style="width: 80px"/>
+                    </h:column>
+                <h:column>
+                        <f:facet name="header">
+                            正确选项
+                        </f:facet>
+                    <h:inputText value="#{question.answerKey}" style="width: 80px"/>
+                    </h:column>
+                <h:column>
+                        <f:facet name="header">
+                            分值
+                        </f:facet>
+                    <h:inputText value="#{question.credit}" style="width: 80px"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            操作
+                        </f:facet>
+                        <h:commandButton value="更改" action="#{dataBean.updateQuestion(question.id.questionId, question.id.courseId, question.questionDesc, question.answerA, question.answerB, question.answerC, question.answerD, question.answerKey, question.credit)}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            操作
+                        </f:facet>
+                        <h:commandButton value="删除" action="#{dataBean.deleteQuestionById(question.id.questionId,question.id.courseId)}"/>
+                    </h:column>
+                <f:facet name="footer">
+                    <br/>
+                    <h:commandButton value="返回" action="managersuccess.xhtml" style="height: 30px;"/>  
+                          <br/><br/>
+                </f:facet>
+            </h:dataTable>
+        </h:form>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>密码修改</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body >
+        <h:form style="background: url(../resources/pic/pic1.jpg);width: 700px;height: 600px;margin:50px auto; border-radius: 10px; line-height: 40px;">
+             <h:panelGrid columns="3"  cellspacing="10" style="margin: 40px auto">
+                <f:facet name="header">
+                <h1 style="margin-top: 100px;">修改密码</h1>
+                </f:facet>
+                 <h:outputLabel for="sname" value="用户名&nbsp;:" style="font-weight: bold;"/>&nbsp;
+            <h:outputText value="#{dataBean.student.studentName}" id="sname" />
+            
+            <h:outputLabel for="sid" value="编&nbsp;号&nbsp;:" style="font-weight: bold;"/>&nbsp;
+            <h:outputText value="#{dataBean.stId}" id="sid" />
+            
+            <h:outputLabel for="spwd" value="密&nbsp;码&nbsp;:" style="font-weight: bold;"/>&nbsp;
+            <h:inputText value="#{dataBean.spwd}" id="spwd" style="height: 20px;width: 120px;font-size: larger;border-radius: 10px;"/>
+            
+            <f:facet name="footer">
+                &nbsp;&nbsp;&nbsp;
+                <h:commandButton value="提交修改" action="#{dataBean.updateSpwd()}" style="background-color: #398439; height: 30px;border-radius: 5px;"/>
+            </f:facet>
+            </h:panelGrid>
+        </h:form>
+    </h:body>
+</html>

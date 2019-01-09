@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>修改密码</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+        <h:form style="background: url(../resources/pic/pic1.jpg);width: 700px;height: 600px;margin:50px auto; border-radius: 10px; line-height: 40px;">
+               <h:panelGrid columns="2" cellspacing="10" style="margin: 40px auto">
+                <f:facet name="header">
+                    <h1 style="margin-top: 100px;">修改密码</h1>
+                </f:facet>
+            <h:outputLabel for="mname" value="用户名 &nbsp;:" style="font-weight: bold;"/>
+            <h:outputText value="#{dataBean.manager.managerName}" id="mname" />
+            
+            <h:outputLabel for="sno" value="账&nbsp;号 &nbsp;:" style="font-weight: bold;"/>
+            <h:outputText value="#{dataBean.stId}" id="sno" />
+            
+            <h:outputLabel for="spwd" value="密&nbsp;码 &nbsp;:" style="font-weight: bold;"/>
+            <h:inputText value="#{dataBean.spwd}" id="spwd" style="height: 20px; border-radius: 10px;"/>
+            <br/><br/>
+            <h:commandButton value="提交修改" action="#{dataBean.updateMpwd()}" style="background-color: #398439; height: 30px;border-radius: 5px;"/>
+               </h:panelGrid>
+            <hr/>
+        </h:form>
+    </h:body>
+</html>

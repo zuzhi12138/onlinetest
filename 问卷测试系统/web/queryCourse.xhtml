@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>查看问卷类别</title>
+    </h:head>
+    <h:body style="text-align: center;">
+        <h:form style="background: url(../resources/pic/pic1.jpg);width: 1150px;height: 800px;margin:50px auto; border-radius: 10px;">
+            
+            <br/><br/>
+
+            <h:dataTable id="data_table" value="#{dataBean.scourselist}" var="scourse"  rules="rows" width="500" style="text-align:center;margin:30px auto;line-height: 40px;">
+                <f:facet name="header">
+                    <h1>问卷类别信息</h1>
+                </f:facet>
+                <h:column>
+                    <f:facet name="header" >
+                        编号
+                    </f:facet>
+                    <h:outputText value="#{scourse.id.studentId}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        姓名
+                    </f:facet>
+                    <h:outputText value="#{scourse.studentName}" style="width: 80px"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        问卷类别id
+                    </f:facet>
+                    <h:outputText value="#{scourse.id.courseId}" style="width: 80px"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        问卷类别名
+                    </f:facet>
+                    <h:outputText value="#{scourse.courseName}" style="width: 80px"/>
+                </h:column>
+                
+
+                
+                <f:facet name="footer">
+                    <br/>
+                    <h:commandButton value="返回" action="success.xhtml" style="background-color: #398439; height: 30px;border-radius: 5px;"/> 
+                    <br/><br/>
+                </f:facet>
+            </h:dataTable>
+        </h:form>
+    </h:body>
+</html>
+

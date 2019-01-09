@@ -1,0 +1,300 @@
+.header{
+    background-image: url(../resources/pic/pic1.jpg);
+    width: 80%;
+    height: 124px;
+    text-align: center;
+    margin: auto;  
+    border-radius: 10px;
+}
+.nav ul {
+	float: right;
+	padding: 0px;
+	margin-top: 0px;
+	list-style: none;
+}
+
+.nav ul li {
+	padding: 0 6px;
+	float: left;
+        font-size: 20px;
+}
+
+.nav ul li a {
+	color: black;
+	height: 20px;
+	text-decoration: none;
+	font-size: 15px;
+}
+.input{
+    border-radius: 5px;
+    border: solid 1px lightblue;
+    margin-left: 5px;
+    height: 20px;
+}
+.button{
+    border-radius: 5px;
+    border: none;
+    background-color: darkcyan;
+    outline:none;
+    padding: 5px 10px; 
+    color: white;
+    margin-left: 5px;
+}
+.button :hover{
+    cursor: pointer;
+}
+.body{
+    background-image: url(../resources/pic/pic1.jpg);
+    width: 80%;
+    height:1200px;
+    margin: 55px auto;
+    border-radius: 10px;
+}
+.foot{
+    width:100%;
+   margin-top:6px;
+   float: left; 
+   text-align: center;
+}
+#div1{
+    float: left;
+    margin-top: 10px;
+}
+#div2{
+    width: 30%;
+    height: 20%;
+    text-align: center;
+    border:1px solid;
+    float: left;
+    border-radius: 5px;
+}
+#div3{
+    float: left;
+    margin-left:12px;
+    height: 20%;
+    width: 68%;
+    border-radius: 5px;
+    border-top: none;
+    border-left: solid 1px grey;
+    border-right: solid 1px grey;
+    border-bottom: solid 1px grey;
+}
+#div3-1{
+    width: 48%;
+    height: 80%;
+    float: left;
+    border-right: solid 1px grey;
+}
+#div3-1-1{
+    background-image: url(../resources/pic/pic2.jpg);
+    width: 62%;
+    height: 100%;
+    float: left;
+}
+#div3-2{
+    width: 48%;
+    height: 80%;
+    float: left;
+    margin-left: 20px;
+    border-right: solid 1px grey;
+}
+#div3-2-1{
+    background-image: url(../resources/pic/pic3.jpg);
+    width: 52%;
+    height: 100%;
+    float: left;
+}
+#div4{
+    margin-top: 10px;
+    float: left;
+    height: 20%;
+    width: 100%;
+    border-radius: 5px;
+    border-top: solid 1px grey;
+    border-left: none;
+    border-right: solid 1px grey;
+    border-bottom: solid 1px grey;
+    
+}
+#div4-1{
+    width: 24%;
+    height: 79%;
+    float: left;
+    border-right: solid 1px grey;
+}
+#div4-1-1{
+    margin-top: 10px;
+    background-image: url(../resources/pic/pic4.jpg);
+    width: 50%;
+    height: 90%;
+    float: left;
+    margin-left: 3px;
+}
+#div4-2{
+    width: 36%;
+    height: 79%;
+    float: left;
+    margin-left: 10px;
+    border-right: solid 1px grey;
+}
+#div4-2-1{
+    background-image: url(../resources/pic/pic5.gif);
+    width: 54%;
+    height: 95%;
+    float: left;
+}
+#div4-3{
+    width: 37%;
+    height: 80%;
+    float: left;
+    margin-left: 10px;
+    border-right: solid 1px grey;
+}
+#div4-3-1{
+    background-image: url(../resources/pic/pic6.jpg);
+    width: 60%;
+    height: 95%;
+    float: left;
+}
+#div5{
+    margin-top: 10px;
+    float: left;
+    height: 20%;
+    width: 100%;
+    border-radius: 5px;
+    border-top: solid 1px grey;
+    border-left: none;
+    border-right: solid 1px grey;
+    border-bottom: solid 1px grey;
+    
+}
+#div5-1{
+    width: 30%;
+    height: 80%;
+    float: left;
+    border-right: solid 1px grey;
+}
+#div5-1-1{
+    margin-top: 10px;
+    background-image: url(../resources/pic/pic7.jpg);
+    width: 52%;
+    height: 90%;
+    float: left;
+    margin-left: 3px;
+}
+#div5-2{
+    width: 32%;
+    height: 80%;
+    float: left;
+    margin-left: 20px;
+    border-right: solid 1px grey;
+}
+#div5-2-1{
+    background-image: url(../resources/pic/pic8.jpg);
+    margin-top: 20px;
+    width: 55%;
+    height: 75%;
+    float: left;
+}
+#div5-3{
+    width: 33%;
+    height: 80%;
+    float: left;
+    margin-left: 20px;
+    border-right: solid 1px grey;
+}
+#div5-3-1{
+    background-image: url(../resources/pic/pic9.png);
+    width: 47%;
+    height: 96%;
+    float: left;
+}
+#div6{
+    margin-top: 24px;
+    float: left;
+    height: 20%;
+    width: 100%;
+    border-radius: 5px;
+    border-top: solid 1px grey;
+    border-left: none;
+    border-right: solid 1px grey;
+    border-bottom: solid 1px grey;
+    
+}
+#div6-1{
+    width: 30%;
+    height: 80%;
+    float: left;
+    border-right: solid 1px grey;
+}
+#div6-1-1{
+    background-image: url(../resources/pic/pic10.jpg);
+    width: 48%;
+    height: 100%;
+    float: left;
+    margin-left: 3px;
+}
+#div6-2{
+    width: 32%;
+    height: 80%;
+    float: left;
+    margin-left: 20px;
+    border-right: solid 1px grey;
+}
+#div6-2-1{
+    background-image: url(../resources/pic/pic11.jpg);
+    width: 60%;
+    height: 100%;
+    float: left;
+}
+#div6-3{
+    width: 33%;
+    height: 82%;
+    float: left;
+    margin-left: 20px;
+    border-right: solid 1px grey;
+}
+#div6-3-1{
+    background-image: url(../resources/pic/pic12.jpg);
+    width: 48%;
+    height: 100%;
+    float: left;
+}
+.d:hover{
+    cursor: pointer;
+    background-color: activecaption;
+}
+.d{
+    border-radius: 5px;
+    text-decoration: none;
+}
+.p{
+    border-radius: 10px;
+}
+.buttonT{
+    border-radius: 5px;
+    border: none;
+    background-color: darkcyan;
+    outline:none;
+    padding: 2px 6px; 
+    color: white;
+    margin-left: 2px;
+}
+.buttonT :hover{
+    color: #3b3b3b;
+    cursor: pointer;
+}
+
+.top_back{
+    background: url(../resources/images/index_top_bg.jpg) no-repeat center center;
+    background-size: cover;
+    width: 80%;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    overflow-x: hidden; 
+
+
+}
+
